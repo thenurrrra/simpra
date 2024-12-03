@@ -518,8 +518,12 @@ function hideWindowArgeement() {
               <img src="@/assets/images/instagram.png" alt=""
             /></a>
 
-            <img src="@/assets/images/twitter.png" alt="" />
-            <img src="@/assets/images/linkedin.png" alt="" />
+            <a
+              href="https://api.whatsapp.com/send?phone=77751279898&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!"
+              target="_blank"
+            >
+              <img src="@/assets/images/whatsapp.png" alt="" />
+            </a>
           </div>
         </div>
       </div>
@@ -604,6 +608,7 @@ function hideWindowArgeement() {
           gap: 20px;
           img {
             width: 30px;
+            height: 30px;
           }
         }
       }

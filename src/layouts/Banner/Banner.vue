@@ -21,7 +21,7 @@
   text-align: center;
   margin: 155px 0 200px 0;
   @media (max-width: 450px) {
-    margin: 300px 0 150px 0;
+    margin: 200px 0 150px 0;
   }
   .banner__inner {
     .main-text {

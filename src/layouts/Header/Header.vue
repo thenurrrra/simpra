@@ -12,14 +12,52 @@ import { RouterLink } from "vue-router";
         </div>
         <div class="header__nav">
           <ul>
-            <router-link to="/" class="nav"><li>Главная</li></router-link>
+            <router-link to="/" class="nav"
+              ><li>
+                <img
+                  class="block"
+                  src="/simpra/src/assets/images/home.png"
+                  alt=""
+                />
+                <img
+                  src="/simpra/src/assets/images/home-hover.png"
+                  alt=""
+                  class="none"
+                />
+                <p>Главная</p>
+              </li></router-link
+            >
 
             <router-link to="/products" class="nav"
-              ><li>NFC товары</li></router-link
+              ><li>
+                <img
+                  class="block"
+                  src="/simpra/src/assets/images/nfc.png"
+                  alt=""
+                />
+                <img
+                  src="/simpra/src/assets/images/nfc-hover.png"
+                  alt=""
+                  class="none"
+                />
+                <p>NFC товары</p>
+              </li></router-link
             >
 
             <router-link to="/contacts" class="nav"
-              ><li>Контакты</li></router-link
+              ><li>
+                <img
+                  class="block"
+                  src="/simpra/src/assets/images/contacts.png"
+                  alt=""
+                />
+                <img
+                  src="/simpra/src/assets/images/contacts-hover.png"
+                  alt=""
+                  class="none"
+                />
+                <p>Контакты</p>
+              </li></router-link
             >
           </ul>
         </div>
@@ -40,7 +78,6 @@ import { RouterLink } from "vue-router";
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   overflow: hidden;
-  border-radius: 20px;
 }
 .header__inner {
   display: flex;
@@ -74,10 +111,16 @@ import { RouterLink } from "vue-router";
 .header__nav ul {
   display: flex;
   cursor: pointer;
+  @media (max-width: 450px) {
+    justify-content: space-around;
+  }
   li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 5px 20px;
     color: #000;
-    border-radius: 7px;
+    border-radius: 12px;
     transition: 0.2s linear;
     margin: 0 15px;
     font-size: 15px;
@@ -86,7 +129,24 @@ import { RouterLink } from "vue-router";
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-
+    position: relative;
+    img.block {
+      width: 20px;
+      opacity: 1;
+      position: absolute;
+    }
+    img.none {
+      width: 20px;
+      opacity: 0;
+    }
+    p {
+      margin-top: 2px;
+    }
+    @media (max-width: 808px) {
+      p {
+        display: none;
+      }
+    }
     .nav {
       color: #000;
     }
@@ -98,11 +158,21 @@ import { RouterLink } from "vue-router";
   li:hover {
     background-color: #000000;
     padding: 5px 20px;
-    border-radius: 7px;
+    border-radius: 20px;
     margin: 0 15px;
-    font-size: 15яяяpx;
+    font-size: 15px;
     font-weight: 500;
     color: #fff;
+
+    img.block {
+      width: 20px;
+      opacity: 0;
+    }
+
+    img.none {
+      width: 20px;
+      opacity: 1;
+    }
   }
 }
 </style>

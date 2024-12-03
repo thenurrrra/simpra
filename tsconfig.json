@@ -10,5 +10,15 @@
     {
       "path": "./tsconfig.vitest.json"
     }
-  ]
+  ],
+
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+
+  "include": ["src/**/*.{ts,d.ts,vue}"]
 }
